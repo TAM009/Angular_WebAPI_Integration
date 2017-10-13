@@ -1,0 +1,26 @@
+<h1>ProductDetails</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<p *ngIf="!products"><em>Loading...</em></p>
+
+<table class='table' *ngIf="products">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>GroupID</th>
+            <th>ProductName</th>
+            <th>ProductDescription</th>
+            <th>Rate</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let prod of products">
+            <td>{{ prod.id }}</td>  <!--enter the fields in the exact same manner as it comes in the json file eg: id comes as "id" in json-->
+            <td>{{ prod.groupID }}</td>
+            <td>{{ prod.productName}}</td>
+            <td>{{ prod.productDescription }}</td>
+            <td>{{ prod.rate }}</td>
+        </tr>
+    </tbody>
+</table>
